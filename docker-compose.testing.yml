@@ -1,0 +1,10 @@
+version: '3.6'
+
+services:
+  database_test:
+    container_name: postgres_test
+    build: ./db
+    env_file:
+      - ./db-variables.testing.env
+    ports:
+      - 5434:5432

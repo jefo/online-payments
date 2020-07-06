@@ -1,0 +1,11 @@
+failedPaymentResult:
+  type: object
+  properties:
+    code:
+      type: number
+      enum: [1 - payment not accepted, 2 - customer not found, 3 - checking service unavailable or responds with an internal error]
+    operation:
+      type: string
+  required:
+    - code
+    - operation

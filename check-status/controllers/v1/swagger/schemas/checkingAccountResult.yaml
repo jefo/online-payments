@@ -1,0 +1,11 @@
+checkingAccountResult:
+  type: object
+  properties:
+    status:
+      type: boolean
+    account:
+      type: string
+      format: uuid
+  required:
+    - status
+    - account

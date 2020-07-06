@@ -1,0 +1,57 @@
+{
+  "name": "payment-gate",
+  "version": "1.0.0",
+  "description": "Module for accepting payments",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "cross-env NODE_ENV=testing nyc --reporter=lcov --reporter=text-summary ./node_modules/mocha/bin/mocha tests/ --recursive --exit --timeout 10000",
+    "lint": "cross-env eslint '**/**.js'",
+    "lint-fix": "cross-env eslint '**/**.js' --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "config": "^3.3.1",
+    "cross-env": "^7.0.2",
+    "express": "^4.17.1",
+    "express-winston": "^4.0.3",
+    "helmet": "^3.23.3",
+    "http-status-codes": "^1.4.0",
+    "js-yaml": "^3.14.0",
+    "knex": "^0.21.1",
+    "lodash": "^4.17.15",
+    "mkdirp": "^1.0.4",
+    "nock": "^13.0.2",
+    "openapi-validator-middleware": "^3.0.0",
+    "pg": "^8.2.1",
+    "qs": "^6.9.4",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5",
+    "swagger-combine": "^1.1.2",
+    "swagger-jsdoc": "^4.0.0",
+    "swagger-ui-express": "^4.1.4",
+    "upath": "^1.2.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-extra-rules": "^0.8.1",
+    "eslint-plugin-import": "^2.22.0",
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0",
+    "sinon": "^9.0.2",
+    "supertest": "^4.0.2"
+  },
+  "nyc": {
+    "exclude": [
+      "tests/**",
+      "config/**"
+    ]
+  }
+}

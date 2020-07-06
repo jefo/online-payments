@@ -1,0 +1,14 @@
+successPaymentResult:
+  type: object
+  properties:
+    code:
+      type: number
+      enum: [0 - payment accepted]
+    operation:
+      type: string
+    balance:
+      type: number
+  required:
+    - code
+    - operation
+    - balance

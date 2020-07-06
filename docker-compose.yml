@@ -1,0 +1,32 @@
+version: '3.6'
+
+services:
+  check-status:
+    container_name: check-status
+    build: ./check-status
+    env_file:
+      - ./db-variables.env
+      - ./service.env
+    ports:
+      - 8080:8080
+    links:
+      - database
+
+  payment-gate:
+    container_name: payment-gate
+    build: ./payment-gate
+    env_file:
+      - ./db-variables.env
+      - ./service.env
+    ports:
+      - 8081:8081
+    links:
+      - database
+
+  database:
+    container_name: postgres
+    build: ./db
+    env_file:
+      - ./db-variables.env
+    ports:
+      - 5433:5432

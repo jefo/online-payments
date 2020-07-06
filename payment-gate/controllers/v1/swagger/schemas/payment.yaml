@@ -1,0 +1,18 @@
+payment:
+  type: object
+  properties:
+    msisdn:
+      type: string
+      pattern: '^\+[1-9]{1}[0-9]{3,14}$'
+    date:
+      type: string
+      format: date-time
+    sum:
+      type: number
+    operation:
+      type: string
+  required:
+    - msisdn
+    - date
+    - sum
+    - operation
