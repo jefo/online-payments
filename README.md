@@ -29,7 +29,8 @@ docker-compose stop
   
 ## Swagger contracts description
 
-The contracts description is automatically generated using swagger-jsdoc and swagger-combine packages after the services are launched and can be found at the following URLs:
+The contracts description is automatically generated using swagger-jsdoc and swagger-combine packages.
+After the services are launched, the description can be found at the following URLs:
  - [http://localhost:8080/api/api-docs/](http://localhost:8080/api/api-docs/) for the Check Customer Status service
  - [http://localhost:8081/api/api-docs/](http://localhost:8081/api/api-docs/) for the Payment Gate service
 
