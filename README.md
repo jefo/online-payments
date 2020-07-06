@@ -4,7 +4,7 @@
 
 ### Configuration
 
-Configuration files for modules are located in [payment-status/config](./payment-gate/config), [check-gate/config](./check-status/config) folders.
+Configuration files for modules are located in [payment-gate/config](./payment-gate/config), [check-status/config](./check-status/config) folders.
 DB connection and Check Status service URL configuration must be adjusted appropriately for the environment.
 Before running the containers the database variables should be set up in the appropriate environment files [db-variables](./db-variables.env) and [db-variables.testing](./db-variables.testing.env)
 
